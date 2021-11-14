@@ -21,6 +21,7 @@ namespace PhotoStorage.Class
                 param.Value = param.Value.ToString().Trim();
             }
         }
+        
 
         public static int ToInt(string value)
         {
