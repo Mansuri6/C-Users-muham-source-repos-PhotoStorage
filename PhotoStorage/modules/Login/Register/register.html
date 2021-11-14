@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+
+    <style>
+        body {
+            background-color: #EBEAEF;
+        }
+
+        .container {
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            background-color: #4270C8;
+            width: 350px;
+            margin-top: -60px;
+        }
+
+        p.mb-1 {
+            font-size: 25px;
+            color: #9FB7FD;
+        }
+
+        .btn-primary {
+            border: none;
+            background: #5777DE;
+            margin-bottom: 60px;
+        }
+
+            .btn-primary small {
+                color: #9FB7FD;
+            }
+
+            .btn-primary span {
+                font-size: 13px;
+            }
+
+        .card.two {
+            border-top-right-radius: 60px;
+            border-top-left-radius: 0;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .form-control {
+            border: none;
+            border-radius: 0;
+            outline: 0;
+            border-bottom: 1.5px solid #E6EBEE;
+        }
+
+            .form-control:focus {
+                box-shadow: none;
+                border-radius: 0;
+                border-bottom: 2px solid #8A97A8;
+            }
+
+        .form-control-placeholder {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            transition: all 200ms;
+            opacity: 0.5;
+            font-size: 80%;
+        }
+
+        .form-control:focus + .form-control-placeholder,
+        .form-control:valid + .form-control-placeholder {
+            font-size: 80%;
+            transform: translate3d(0, -90%, 0);
+            opacity: 1;
+            top: 10px;
+            color: #8B92AC;
+        }
+
+        .btn-block {
+            border: none;
+            border-radius: 8px;
+            background-color: #506CCF;
+            padding: 10px 0 12px;
+        }
+
+            .btn-block:focus {
+                box-shadow: none;
+            }
+
+            .btn-block span {
+                font-size: 15px;
+                color: #D0E6FF;
+            }
+
+        .card {
+            width: 500px;
+        }
+
+        @media only screen and (max-width:767px) {
+            .card {
+                width: 450px;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            .card {
+                width: 400px;
+            }
+        }
+
+        @media only screen and (max-width:400px) {
+            .card {
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="d-flex flex-column justify-content-between">
+            <div class="card mt-3 p-5">
+                <div class="logo mb-3"><img src="https://imgur.com/zydrQCr.png"></div>
+                <div>
+                    <p class="mb-1">Start managing your</p>
+                    <h4 class="mb-5 text-white">Photo's with us!</h4>
+                </div> <a href="/#!/login" class="btn btn-primary btn-lg"><small>Already signed up?</small><span>&nbsp;Log in</span> </a>
+            </div>
+            <div class="card two bg-white px-5 py-4 mb-8">
+                <form name="formlogin" ng-submit="register()">
+                    <div class="form-group">
+                        <input type="email" ng-model="user.email" class="form-control" id="mail" required>
+                        <label class="form-control-placeholder" for="mail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" ng-model="user.fullName" class="form-control" id="name" required>
+                        <label class="form-control-placeholder" for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" ng-model="user.password" class="form-control" id="pass" required>
+                        <label class="form-control-placeholder" for="name">Password</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" ng-model="user.cpassword" class="form-control" id="cpass" required>
+                        <label class="form-control-placeholder" for="name">Confirm password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-sm mt-1 mb-2" ng-disabled="registerloader">
+                        CREATE ACCOUNT
+                        <span ng-if="registerloader" class="spinner">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </span>
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
