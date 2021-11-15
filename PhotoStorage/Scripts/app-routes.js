@@ -16,7 +16,12 @@
                     url: "/main",
                     templateUrl: "../modules/images/image.html",
                     controller: 'imageController'
-                })    
+                })
+                    .state("register", {
+                        url: "/register",
+                        templateUrl: "../modules/Login/Register/register.html",
+                        controller:"registerController"
+                    }) 
 
 			    $locationProvider.hashPrefix('');
 			    //$locationProvider.html5Mode({ enabled: true, requireBase: false, rewriteLinks: true })
