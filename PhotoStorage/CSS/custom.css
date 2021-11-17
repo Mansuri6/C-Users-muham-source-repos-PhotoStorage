@@ -1,232 +1,268 @@
 ﻿@import url('custom.css');
 @import url('custom.css');
+
 .spinner {
-    }
+}
 
     .spinner > div {
-      width: 7px;
-      height: 7px;
-      background-color: #fff!important;
-      line-height:200px;
-      border-radius: 100%;
-      display: inline-block;
-      -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-      animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        width: 7px;
+        height: 7px;
+        background-color: #fff !important;
+        line-height: 200px;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     }
 
     .spinner .bounce1 {
-      -webkit-animation-delay: -0.32s;
-      animation-delay: -0.32s;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
     }
 
     .spinner .bounce2 {
-      -webkit-animation-delay: -0.16s;
-      animation-delay: -0.16s;
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
     }
 
-    @-webkit-keyframes sk-bouncedelay {
-      0%, 80%, 100% { -webkit-transform: scale(0) }
-      40% { -webkit-transform: scale(1.0) }
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0)
     }
 
-    @keyframes sk-bouncedelay {
-      0%, 80%, 100% { 
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
         -webkit-transform: scale(0);
         transform: scale(0);
-      } 40% { 
+    }
+
+    40% {
         -webkit-transform: scale(1.0);
         transform: scale(1.0);
-      }
     }
+}
 
-    .btn-default[disabled]:hover{
-        color:black;
+.btn-primary:hover .spinner > div {
+    background-color: #fff !important
+}
+
+.btn-default[disabled]:hover {
+    color: black;
+}
+
+.btn-primary:hover .spinner > div {
+    background-color: #fff !important
+}
+
+
+.ellipse {
+    /*right:5%; top:5%; z-index:99999; font-size:1.3em; opacity:0; position:absolute*/
+}
+
+.hoverCon {
+}
+
+.buttonContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    opacity: 1;
+    transition: opacity .35s ease;
+    background: #495057;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.btncontainer {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    text-align: center;
+    opacity: 1;
+    transition: opacity .35s ease;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.hoverCon:hover .buttonContainer {
+    opacity: 0.5;
+}
+
+.hoverCon:hover .ellipse {
+    opacity: 1;
+}
+
+.hoverCon:active .buttonContainer {
+    opacity: 0.5;
+}
+
+.hoverCon:hover .ellipse {
+    opacity: 1;
+}
+
+.btnoption {
+    width: 43%;
+    border: 1px solid #000000;
+    background: rgba(255, 106, 0, 0.00);
+    outline: 0;
+    background: #000000;
+    border: 1px solid #ced4da;
+    color: #ced4da;
+    padding: 10px 0 10px 0;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+btnoption:active {
+    outline: 0;
+}
+
+.partition {
+    padding-bottom: 20px;
+}
+
+
+.frame {
+    white-space: nowrap; /* This is required unless you put the helper span closely near the img */
+    text-align: center;
+    margin: 1em 0;
+    height: 200px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.frame img {
+    vertical-align: middle;
+    width: 100%;
+    max-height: 200px;
+}
+
+
+.search {
+    width: 20%;
+    text-align: left !important;
+    float: right !important;
+}
+
+@media only screen and (max-width:991px) {
+    .frame {
+        height: 100px;
     }
-
-    .btn-primary:hover .spinner > div{
-        background-color:#fff!important
-    }
-
-
-     .ellipse{
-             /*right:5%; top:5%; z-index:99999; font-size:1.3em; opacity:0; position:absolute*/
-         }
-         .hoverCon{
-
-         }
-         .buttonContainer {
-              position: absolute;
-              right:0;
-              top: 0;
-              text-align: center;
-              opacity: 1;
-              transition: opacity .35s ease;
-              background:#495057;
-              width:100%;
-              height:100%;
-              opacity:0;
-        }
-
-         .btncontainer {
-              position: absolute;
-              right:0;
-              top: 20%;
-              text-align: center;
-              opacity: 1;
-              transition: opacity .35s ease;
-              z-index:999;
-              width:100%;
-              height:100%;
-              opacity:0;
-        }
-
-        .hoverCon:hover .buttonContainer{
-            opacity:0.5;
-        }
-        
-        .hoverCon:hover .btncontainer{
-            opacity:1;
-        }
-        .hoverCon:hover .ellipse{
-            opacity:1;
-        }
-
-        .hoverCon:active .buttonContainer{
-            opacity:0.5;
-        }
-        .hoverCon:hover .ellipse{
-            opacity:1;
-        }
-
-        .btnoption{
-            width:43%;
-            border:1px solid #000000;
-            background:rgba(255, 106, 0, 0.00);
-            outline:0;
-            background:#000000;
-            border:1px solid #ced4da;
-            color:#ced4da;
-            padding:10px 0 10px 0;
-            margin-bottom:15px;
-            opacity:0.7;
-        }
-
-        btnoption:active{
-           outline:0;
-        }
-
-        .partition{
-            padding-bottom:20px;
-        }
-        
-
-        .frame {
-            white-space: nowrap; /* This is required unless you put the helper span closely near the img */
-            text-align: center;
-            margin: 1em 0;
-            height:200px;
-        }
-
-        .helper {
-            display: inline-block;
-            height: 100%;
-            vertical-align: middle;
-        }
 
         .frame img {
-            vertical-align: middle;
-            width:100%;
-            max-height:200px;
+            max-height: 100px;
         }
 
+    .btncontainer button {
+        outline: 0;
+        width: 43%;
+        line-height: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 1px 0 1px 0;
+        margin-bottom: 3px;
+    }
 
-         .search{
-                width:60%;
-                text-align:left !important;
-                float: right !important;
-            }
-        @media only screen and (max-width:991px) {
-            .frame {
-                height:100px;
-            }
-            .frame img {
-                max-height:100px;
-            }
-            .btncontainer button{
-                outline:0;
-                width:43%;
-                line-height:inherit;
-                font-family:inherit;
-                font-size:inherit;
-                padding:1px 0 1px 0;
-                margin-bottom:3px;
-            }
-            .partition{
-                padding-bottom:10px;
-            }
-            .btncontainer span{
-                font-size:14px;
-            }
-            .btncontainer{
-                top:15%;
-            }
-        }
-        @media (min-width:575px) and (Max-width:767px){
-            .col-sm-3 {
-                -ms-flex: 0 0 33.3%;
-                flex: 0 0 33.3%;
-                max-width: 33.3%;
-            }
-        }
-        
+    .partition {
+        padding-bottom: 10px;
+    }
 
-        @media only screen and (max-width:575px){
-            .frame {
-                height:200px;
-            }
-            .frame img {
-                max-height:200px;
-            }
-            .btncontainer button{
-                outline:0;
-                width:43%;
-                line-height:inherit;
-                font-family:inherit;
-                font-size:inherit;
-                padding:10px 0 10px 0;
-                margin-bottom:10px;
-            }
-            .partition{
-                padding-bottom:30px;
-            }
-            .btncontainer span{
-                font-size:20px;
-            }
-            .btncontainer{
-                top:20%;
-            }
-        }
-        nav h6{
-            padding-left:2%;
-            padding-right:2%;
+    .btncontainer span {
+        font-size: 14px;
+    }
+
+    .btncontainer {
+        top: 15%;
+    }
+}
+
+@media (min-width:575px) and (Max-width:767px) {
+    .col-sm-3 {
+        -ms-flex: 0 0 33.3%;
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+    }
+
+    .search {
+        width: 30%;
+    }
+}
+
+
+@media only screen and (max-width:575px) {
+    .frame {
+        height: 200px;
+    }
+
+        .frame img {
+            max-height: 200px;
         }
 
-        @media only screen and (Max-width:420px){
-            .frame {
-                min-height:200px;
-            }
-            .frame img {
-                max-height:200px;
-            }
-            nav h6{
-                font-size:12px;
-            }
-            nav .form-control {
-                font-size:0.8rem;   
-            }
-            .search{
-                width:50%;
-                text-align:left !important;
-                float: right !important;
-            }
+    .btncontainer button {
+        outline: 0;
+        width: 43%;
+        line-height: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 10px 0 10px 0;
+        margin-bottom: 10px;
+    }
+
+    .partition {
+        padding-bottom: 30px;
+    }
+
+    .btncontainer span {
+        font-size: 20px;
+    }
+
+    .btncontainer {
+        top: 20%;
+    }
+
+    .search {
+        width: 40%;
+    }
+}
+
+nav h6 {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+@media only screen and (Max-width:420px) {
+    .frame {
+        min-height: 200px;
+    }
+
+        .frame img {
+            max-height: 200px;
         }
+
+    nav h6 {
+        font-size: 12px;
+    }
+
+    nav .form-control {
+        font-size: 0.8rem;
+    }
+
+    .search {
+        width: 50%;
+        text-align: left !important;
+        float: right !important;
+    }
+}

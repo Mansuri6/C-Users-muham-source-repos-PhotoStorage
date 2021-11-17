@@ -21,7 +21,18 @@
                         url: "/register",
                         templateUrl: "../modules/Login/Register/register.html",
                         controller:"registerController"
-                    }) 
+                    })
+                    .state("images", {
+                        url: "/captured_images",
+                        templateUrl: "../modules/images/imageList/imageList.html",
+                        controller: 'imageListController'
+                    })
+
+                    .state("albumShare", {
+                        url: "/shared_album",
+                        templateUrl: "../modules/images/sharedAlbum/sharedAlbum.html",
+                        controller: 'sharedAlbumController'
+                    })
 
 			    $locationProvider.hashPrefix('');
 			    //$locationProvider.html5Mode({ enabled: true, requireBase: false, rewriteLinks: true })

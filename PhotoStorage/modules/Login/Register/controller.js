@@ -38,7 +38,7 @@
                             closeOnCancel: true
                         }, function (isConfirm) {
                             if (isConfirm) {
-                                window.location.href = "/#!/login";
+                                window.location.href = "/#/login";
                             }
                         });
                     } else {

@@ -1,4 +1,5 @@
 ﻿
+using PhotoStorage.modules.Images.Data;
 using PhotoStorage.modules.Login.Data;
 using System;
 using System.Collections.Generic;
@@ -155,7 +156,7 @@ namespace PhotoStorage.Class
         public string token { get; set; }
         public login login { get; set; }
         public List<login> loginList { get; set; }
-        //public album album { get; set; }
-        //public List<album> albumList { get; set; }
+        public album album { get; set; }
+        public List<album> albumList { get; set; }
     }
 }

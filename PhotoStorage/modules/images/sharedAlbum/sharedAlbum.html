@@ -6,6 +6,7 @@
     <style>
         .wallpaper {
             position:absolute;
+            width: 200%;
             height: 2000px;
             z-index:-9999;
         }
@@ -21,7 +22,12 @@
                 font-size:10px;
             }
         }
-        
+
+         @media only screen and (max-width:558px) {
+            .imgFont {
+                font-size:12px;
+            }
+        }
 
     </style>
 </head>
@@ -34,41 +40,15 @@
             <a href="/#/login" style="color:#808080; z-index:99999" class="btn btn-default">Logout</a>
         </div>
         <div style="padding-top:100px;">
-            <nav class="navbar navbar-light" style="border:1px solid #808080; background:#fff; flex-wrap:nowrap !important;">
-                <button class="btn btn-sm btn-default" style="width:5%; min-width:54px" title="add Album" ng-click="addModal()"><img src="Images/Plus-Folder-icon.png" style="width:100%" /></button>
-                <h6 style="color:#808080">Albums</h6>
-                <input title="search here" class="form-control mr-sm-2 search" type="search" ng-model="searchAlbums" placeholder="Search here..." aria-label="Search">
+            <nav class="navbar navbar-light" style="border:1px solid #808080; background:#fff; flex-wrap:nowrap !important;"><h6><a style="color:#000000" href="/#/main">lbums </a> / <span style="color:#808080">Shared Albums</span></h6>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" ng-model="searchAlbums" placeholder="Search here..." aria-label="Search">
+                </form>
             </nav>
         </div>
 
 
-        <div class="row" style="padding-top:5%">
-            <div class="col-sm-3" style="cursor:pointer" ng-click="gotoimages(0,'Shared Albums','ay')">
-                <div class="form-group">
-                    <div style="border:1px solid #ced4da; border-radius:3%; text-align:center; padding-bottom:3%">
-                           <img src="Images/folder.png" class="col-sm-12" />
-                        <span class="imgFont">Album shared to you</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3" style="cursor:pointer" ng-click="gotoimages(0,'Shared Photo','sy')">
-                <div class="form-group">
-                    <div style="border:1px solid #ced4da; border-radius:3%; text-align:center; padding-bottom:3%">
-                        <img src="Images/folder.png" class="col-sm-12"/>
-                        <span class="imgFont">Photo's shared to you</span>
-                    </div>
-                </div>
-            </div>
-            <!--<div class="col-sm-3" style="cursor:pointer" ng-click="gotoimages(0,'Photos you shared','ys')">
-                <div class="form-group">
-                    <div style="border:1px solid #ced4da; border-radius:3%; text-align:center; padding-bottom:3%">
-                        <img src="Images/folder.png" class="col-sm-12" />
-                        <span class="imgFont">Photo's you shared</span>
-                    </div>
-                </div>
-            </div>-->
-
-            <div class="col-sm-3 hoverCon" ng-repeat="a in albumList | filter:searchAlbums" title="click album to view option" ng-click="viewButton(a)">
+        <div class="row" style="padding-top:5%"><div class="col-sm-3 hoverCon" ng-repeat="a in albumList | filter:searchAlbums" title="click image to view option" ng-click="viewButton(a)">
                 <div class="form-group">
                     <div style="border:1px solid #ced4da; border-radius:3%; text-align:center; padding-bottom:3%">
                         <div style="position:relative">
@@ -76,7 +56,6 @@
                             <div id="{{'hover' + a.id}}" class="btncontainer" style="position:absolute; text-align:center">
                                 <div>
                                     <button class="btnoption" ng-click="gotoimages(a.id,a.fName,'na')"><span>View</span></button>
-                                    <button class="btnoption" ng-click="sharedModal(a)"><span>share</span></button>
                                     <button class="btnoption" ng-click="ediModal(a)"><span>edit</span></button>
                                     <button class="btnoption" ng-click="deleteImage(a)"><span>delete</span></button>
                                 </div>
@@ -93,7 +72,7 @@
 
     <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="wines detail" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content"> 
+            <div class="modal-content">
                 <form ng-submit="shareImages()">
                     <div class="modal-header">
                         <span style="color:#495057; font-weight:bold; font-family:sans-serif;">
@@ -102,7 +81,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <input type="text" class="form-control form-group" ng-model="share.sharedTo" placeholder="Email Address" style="width:100%" />
+                        <input type="email" name="email" class="form-control form-group" ng-model="share.sharedTo" placeholder="Email Address" style="width:100%" />
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success" ng-disabled="sharLoader">

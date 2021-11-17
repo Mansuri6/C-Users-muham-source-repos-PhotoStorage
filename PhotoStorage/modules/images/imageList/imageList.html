@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        .wallpaper {
+            position:absolute;
+            height: 2000px;
+            z-index:-9999;
+        }
+        .wallpaper:before {
+            content:''; display:flex;width: 100%;height: 100%;background: url(https://raw.github.com/peterwestendorp/shelves/master/images/white_wall.png);
+        }
+        .imgFont {
+                   font-size:12px;
+                   font-weight:400; text-align:left;color:black;
+                }
+         @media only screen and (max-width:767px) {
+            .imgFont {
+                font-size:10px;
+            }
+        }
+
+         @media only screen and (max-width:558px) {
+            .imgFont {
+                font-size:12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wallpaper">
+    </div>
+    <div class="container">
+        <div style="text-align:right">
+            <a href="/#/login" style="color:#808080; z-index:99999" class="btn btn-default">Logout</a>
+        </div>
+        <div style="padding-top:100px;">
+            <nav class="navbar navbar-light" style="border:1px solid #808080; background:#fff;flex-wrap:nowrap !important;">
+                <button ng-if="param.id > 0" class="btn btn-sm btn-default" style="width:5%; min-width:54px" title="add images" ng-click="addImages()"><img src="Images/Plus-Folder-icon.png" style="width:100%" /> </button>
+                <h6>
+                    <a style="color:#000000" href="{{param.isShared == 1 && param.type !=='sy' ? '/#/shared_album' : '/#/main'}}">
+                        {{param.isShared == 1 && param.type !=='sy' ? 'Shared Albums ' : 'My Albums '}}
+                    </a> / <span style="color:#808080">{{param.album}}</span>
+                </h6>
+
+                <form class="form-inline">
+                    <input title="search here" class="form-control mr-sm-2" type="search" ng-model="searchImages" placeholder="Search here..." aria-label="Search">
+                </form>
+            </nav>
+        </div>
+
+
+        <div class="row" style="padding-top:5%">
+            <div class="col-sm-3 hoverCon" ng-repeat="i in imgList | filter:searchImages" style="cursor:pointer" title="click image to view option" ng-click="viewButton(i)">
+                <div class="form-group">
+                    <div style="border:1px solid #ced4da; border-radius:3%; text-align:center;">
+                        <div style="position:relative">
+                            <div class="buttonContainer"></div>
+                            <div id="{{'hover' + i.id}}" class="btncontainer" style="position:absolute; text-align:center">
+                                <div>
+                                    <button ng-if="param.isShared == 0" class="btnoption" ng-click="sharedModal(i)"><span>share</span></button>
+                                    <button class="btnoption" ng-click="editImage(i)"><span>edit</span></button>
+                                    <button class="btnoption" ng-click="deleteImage(i)"><span>delete</span></button>
+                                    <button class="btnoption" ng-click="download(i)"><span>download</span></button>
+                                </div>
+
+                            </div>
+                            <div class="frame">
+                                <span class="helper"></span><img src="{{'../images/' + i.albumId + '/' + i.id + i.imgEx}}" lastmod="{{i.createdDate | date:'yyyyMMddHHmmss'}}}}"/>
+                            </div>
+                            <div style="text-align:left;background:#ced4da; border-radius:3%; padding:3% 5% 3% 5%">
+                                <div class="imgFont">{{i.geolocation}}</div>
+                                <div class="imgFont">{{i.tags}}</div>
+                                <div class="imgFont">{{i.capturedBy}}</div>
+                                <div class="imgFont">{{i.capturedDate | date:short}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="modal fade" id="addImages" tabindex="-1" role="dialog" aria-labelledby="wines detail" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <form ng-submit="SaveImages(img)">
+                    <div class="modal-header">
+                        <span style="color:#495057; font-weight:bold; font-family:sans-serif;">
+                            {{isEdit ? 'Edit Image' : 'Add Images'}}
+                        </span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="form-group">
+                                    <div style="cursor:pointer; width:100%; height:220px; text-align:center; border:2px dashed #ddd;" ngf-drop ngf-select="SetImage($files, $event)" ngf-change="SetImage($files, f.id)" ng-model="files" class="drop-box" ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="true" accept="image/*">
+                                        <div ng-if="imgSrc == ''" style="position:absolute; top:40%; left:43%"><i class="fa fa-camera fa-2x"></i></div>
+                                        <img ng-if="!imgSrc == ''" src="{{imgSrc}}" style="height:220px; width:100%" />
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <input type="text" ng-model="img.geolocation" class="form-control" placeholder="geolocation" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" ng-model="img.tags" class="form-control" placeholder="Tags" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" ng-model="img.capturedDate" class="form-control" placeholder="Captured Date"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" ng-model="img.capturedBy" class="form-control" placeholder="Captured By" required />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" ng-disabled="imgLoader">
+                            Save
+                            <span ng-if="imgLoader" class="spinner">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </span>
+                        </button>
+                        <button class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="wines detail" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <form ng-submit="shareImages()">
+                    <div class="modal-header">
+                        <span style="color:#495057; font-weight:bold; font-family:sans-serif;">
+                            Add Folder
+                        </span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="email" name="email" class="form-control form-group" ng-model="share.sharedTo" placeholder="Email Address" style="width:100%" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" ng-disabled="sharLoader">
+                            Share
+                            <span ng-if="sharLoader" class="spinner">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </span>
+                        </button>
+                        <button class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

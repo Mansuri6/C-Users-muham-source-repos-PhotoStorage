@@ -2,9 +2,9 @@
 (function () {
     "use strict";
     angular.module("PG")
-			.controller("imageController", ["$scope", "$window", "imageFactory", "loginFactory", imageController]);
+			.controller("sharedAlbumController", ["$scope", "$window", "imageFactory", "loginFactory", sharedAlbumController]);
 
-    function imageController($scope, $window, imageFactory, loginFactory) {
+    function sharedAlbumController($scope, $window, imageFactory, loginFactory) {
         $scope.album = {
             tokenId: window.localStorage["utoken"],
             fName:""
@@ -22,6 +22,7 @@
             }
         });
 
+
         $scope.viewButton = function (i) {
             angular.forEach($scope.albumList, function (d) {
                 document.getElementById("hover" + d.id).style.display = "none"
@@ -30,9 +31,9 @@
         }
 
         $scope.albumList = [];
-        var getAlbumsById = function () {
+        var getAlbumByShared = function () {
             $scope.albumList = [];
-            imageFactory.getAlbumByUser($scope.album).then(function (res) {
+            imageFactory.getAlbumByShared($scope.album).then(function (res) {
                 $scope.albumList = res;
             })
         }
@@ -75,7 +76,7 @@
             $scope.sharLoader = true;
             imageFactory.SharedAlbumbyEmail($scope.share).then(function (res) {
                 if (res.isSuccess) {
-                    swal("Success", "Successfuly share your photo to " + $scope.share.sharedTo);
+                    swal("Success", "you success share your photo to " + $scope.share.sharedTo);
                     $scope.sharLoader = false;
                     $("#shareModal").modal("hide");
                 } else {
@@ -103,7 +104,7 @@
             $scope.isAdd = false;
             $("#addAlbum").modal("show");
         }
-        getAlbumsById();
+        getAlbumByShared();
         $scope.createAlbumFolder = function () {
             var invalid = false;
             if ($scope.album.fName.toUpperCase() == ("Photo's shared to you").toUpperCase()) {
@@ -145,15 +146,8 @@
         }
         
 
-        $scope.gotoimages = function (id, fName, type) {
-            if (type == 'ay') {
-                window.location.href = "/#/shared_album";
-            } else if (type == 'sy') {
-                window.location.href = "/#/captured_images?type=" + type + "&id=" + id + "&album=" + fName + "&isShared=1";
-            } else {
-                window.location.href = "/#/captured_images?type=" + type + "&id=" + id + "&album=" + fName + "&isShared=0";
-            }
-           
+        $scope.gotoimages = function (id,fName, type) {
+            window.location.href = "/#/captured_images?type=" + type + "&id=" + id + "&album=" + fName + "&isShared=1";
         }
     }
 
