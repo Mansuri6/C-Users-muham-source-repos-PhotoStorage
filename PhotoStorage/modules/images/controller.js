@@ -50,7 +50,7 @@
         $scope.deleteImage = function (d) {
             swal({
                 title: 'Warning?',
-                text: "are you sure you want to delete this Album?, all photos in this album will be delete also",
+                text: "Are you sure you want to delete this Album?, all the photos in this album will be deleted !",
                 type: 'info',
                 showCancelButton: true,
                 confirmButtonText: 'Yes',
@@ -63,7 +63,7 @@
                             swal("Success", "Album successfuly deleted", "success");
                             getImagesByAlbumAndUserList();
                         } else {
-                            swal("Timeout connection", "please try to refresh and create again!", "info")
+                            swal("Timeout connection", "Please try to refresh and create again!", "info")
                         }
                     })
                     window.location.reload();
@@ -79,7 +79,7 @@
                     $scope.sharLoader = false;
                     $("#shareModal").modal("hide");
                 } else {
-                    swal("Oops!", res.errorMessage, "warning")
+                    swal("Oops, !", res.errorMessage, "warning")
                     $scope.sharLoader = false;
                     $("#shareModal").modal("hide");
                 }

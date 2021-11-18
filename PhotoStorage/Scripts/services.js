@@ -5,7 +5,7 @@
 
     function UserAuthorizationFactory($http, $q, $window) {
         var StorageData = {};
-        var url = "http://" + location.hostname + ":64252/";
+        var url = "http://photostorage2021-001-site1.itempurl.com/";
         var c = {
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'

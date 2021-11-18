@@ -140,3 +140,4 @@ namespace PhotoStorage.modules.Images.Data
         public string sharedTo { get; set; }
     }
 }
+    //public class                                                                                   
