@@ -86,3 +86,47 @@ C:\Users\muham\source\repos\PhotoStorage\Repository\C-Users-muham-source-repos-P
 C:\Users\muham\source\repos\PhotoStorage\Repository\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.csproj.CopyComplete
 C:\Users\muham\source\repos\PhotoStorage\Repository\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.dll
 C:\Users\muham\source\repos\PhotoStorage\Repository\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.pdb
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\PhotoStorage.dll.config
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\PhotoStorage.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\PhotoStorage.pdb
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\csc.exe
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\csc.exe.config
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\csc.rsp
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\csi.exe
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\csi.rsp
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\System.AppContext.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\System.Collections.Immutable.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\System.IO.FileSystem.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\System.Reflection.Metadata.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\vbc.exe
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\vbc.exe.config
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\vbc.rsp
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\VBCSCompiler.exe
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\roslyn\VBCSCompiler.exe.config
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\Newtonsoft.Json.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\System.Net.Http.Formatting.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\System.Web.Http.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\System.Web.Http.WebHost.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\Newtonsoft.Json.xml
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\System.Net.Http.Formatting.xml
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\System.Web.Http.xml
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\System.Web.Http.WebHost.xml
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.csprojAssemblyReference.cache
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.csproj.CoreCompileInputs.cache
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.csproj.CopyComplete
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.dll
+C:\BSc IT 3rd Year\CMPG323\C-Users-muham-source-repos-PhotoStorage\PhotoStorage\obj\Debug\PhotoStorage.pdb
